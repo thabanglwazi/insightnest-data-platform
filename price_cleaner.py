@@ -5,13 +5,13 @@ import pandas as pd
 def clean_veg_price_data(df):
     def assign_season(month):
         if month in [12, 1, 2]:
-            return 'Winter'
+            return str('Summer')
         elif month in [3, 4, 5]:
-            return 'Summer'
+            return str('Winter')
         elif month in [6, 7, 8]:
-            return 'Monsoon'
+            return str('Monsoon')
         else:
-            return 'Autumn'
+            return str('Autumn')
 
     df = df.copy()
 
